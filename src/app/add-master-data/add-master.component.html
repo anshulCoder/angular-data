@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row justify-content-center pt-4 pb-2">
+    <form class="form" #masterDataForm="ngForm" (ngSubmit)="saveMasterData(masterDataForm)">
+      <h3 class="pb-2">Add New Master Record</h3>
+      <div class="form-group">
+        <label for="sub_group_name">Sub Group Name:</label>
+        <input type="text" class="form-control" ngModel placeholder="Apple-fuji" name="sub_group_name" id="sub_group_name" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="text" class="form-control" placeholder="500 gm" ngModel name="quantity" id="quantity" required>
+      </div>
+      <div class="form-group">
+        <label for="sell_uom">Selling Unit of measure (UOM):</label>
+        <input type="text" class="form-control" placeholder="kg" ngModel name="sell_uom" id="sell_uom" required>
+      </div>
+      <div class="form-group">
+        <label for="sell_uom_type">Selling UOM Type:</label>
+        <input type="text" class="form-control" ngModel placeholder="Loose" name="sell_uom_type" id="sell_uom_type" required>
+      </div>
+      <div class="form-group">
+        <label for="avg_weight_per_uom">Avg weight per UOM:</label>
+        <input type="number" class="form-control" ngModel name="avg_weight_per_uom" id="avg_weight_per_uom" required>
+      </div>
+      <div class="form-group">
+        <label for="packaging_cost">Packaging cost:</label>
+        <input type="number" class="form-control" ngModel name="packaging_cost" id="packaging_cost" required>
+      </div>
+      <div class="form-group">
+        <label for="loading_percent">Loading percentage:</label>
+        <input type="number" class="form-control" ngModel name="loading_percent" id="loading_percent" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

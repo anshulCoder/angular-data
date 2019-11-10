@@ -1,0 +1,34 @@
+<div class="container-fluid main-home pt-2">
+	<br>
+	<button type="button" class="btn btn-success mb-2" routerLink="/add">Add New Record</button>
+	<br>
+	<table class="table table-striped table-bordered">
+		<thead class="thead-light">
+			<tr>
+				<th>Sub Group Name</th>
+				<th>Quantity</th>
+				<th>Selling UOM</th>
+				<th>Selling UOM Type</th>
+				<th>Avg weight per UOM</th>
+				<th>Packing cost</th>
+				<th>Loading percent</th>
+				<th>Actions</th>
+		</thead>
+		<tbody>
+			<ng-container *ngIf="masterServices.length>0; else noContent">
+				<tr *ngFor="let m of masterServices">
+					<td>{{m["sub_group_name"]}}<td>
+					<td>{{m["quantity"]}}<td>
+					<td>{{m["sell_uom"]}}<td>
+					<td>{{m["sell_uom_type"]}}<td>
+					<td>{{m["avg_weight_per_uom"]}}<td>
+					<td>{{m["packaging_cost"]}}<td>
+					<td>{{m["loading_percent"]}}<td>
+				</tr>
+			</ng-container>
+			<ng-template #noContent>
+				<tr><td colspan="8">No Data</td></tr>
+			</ng-template>
+		</tbody>
+	</table>
+</div>
